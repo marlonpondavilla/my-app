@@ -22,30 +22,40 @@ const books = [
       "Atomic Habits: An Easy & Proven Way to Build Good Habits & Break Bad Ones",
     author: "James Webb ",
   },
+  
 ];
 
 const BookList = () => {
+  const getBook = (bookId) =>{
+    const findBook = books.find((book) => book.id ===  bookId);
+    return findBook;
+  }
+  
+  
   return (
     <section className="booklist">
      
       {books.map((book) => {
-        return <Book {...book} key={book.id} />;
+        return (
+        <Book {...book} key={book.id} getBook={getBook}/>
+      );
       })}
+
     </section>
   );
 };
 
 const Book = (props) => {
-  const { img, title, author } = props;
-  const diplayTitle = () =>{
-    console.log(title);
+  const { id, img, title, author, getBook } = props;
+  const setBook = () =>{
+    console.log(getBook(id));
   }
   return (
     <article className="book">
       <img src={img} alt={title} />
       <h2>{title}</h2>
       <h4>{author}</h4>
-      <button onClick={diplayTitle}>Display title</button>
+      <button onClick={setBook}>click me</button>
       
     </article>
   );
