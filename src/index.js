@@ -3,12 +3,12 @@ import ReactDOM from "react-dom/client";
 import "./styles/index.css";
 
 const books = [
-  // {
-  //   id: 1,
-  //   img: "https://images-na.ssl-images-amazon.com/images/I/81tVBUv75vL._AC_UL300_SR300,200_.jpg",
-  //   title: "Just for the Summer Paperback",
-  //   author: "Abby Jimenez",
-  // },
+  {
+    id: 1,
+    img: "https://images-na.ssl-images-amazon.com/images/I/81tVBUv75vL._AC_UL300_SR300,200_.jpg",
+    title: "Just for the Summer Paperback",
+    author: "Abby Jimenez",
+  },
   {
     id: 2,
     img: "https://images-na.ssl-images-amazon.com/images/I/611X8GI7hpL._AC_UL600_SR600,400_.jpg",
