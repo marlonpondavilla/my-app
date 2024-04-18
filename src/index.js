@@ -12,7 +12,7 @@ const books = [
   {
     id: 2,
     img: "https://images-na.ssl-images-amazon.com/images/I/611X8GI7hpL._AC_UL600_SR600,400_.jpg",
-    title: "The 48 Laws of Power",
+    title: "The 48 Laws of Power ",
     author: "Robert Greene",
   },
   {
