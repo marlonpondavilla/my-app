@@ -6,29 +6,44 @@
 
 body{
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    background: #f1f5f8;
+    background: #F0F0F0;
     color: #222;
+    
 }
 
 .booklist{
-    width: 90vw;
-    max-width: 1170px;
-    margin: 5rem auto;
-    display: grid;
+    max-width: 80vw;
+    margin: 1.5rem auto;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
     gap: 2rem;
 }
 
-@media screen and (min-width: 768px) {
-  .booklist {
-    grid-template-columns: repeat(3, 1fr);
-    align-items: start;
-  }
-}
 .book {
   background: #fff;
   border-radius: 1rem;
   padding: 2rem;
   text-align: center;
+  position: relative;
+  transition: all 0.5s;
+  max-width: 20rem;
+}
+.book:hover{
+  box-shadow: 5px 5px 1rem black;
+  cursor: pointer;
+}
+
+.book-number {
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-size: 1rem;
+  padding: 0.75rem;
+  border-top-left-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+  background: #c35600;
+  color: #fff;
 }
 .book img{
     width: 100%;
@@ -37,6 +52,10 @@ body{
 .book h2 {
   margin-top: 1rem;
   font-size: 1rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-decoration: underline;
 }
 .book h4 {
   color: #617d98;
@@ -46,4 +65,34 @@ body{
 }
 .book p {
   margin: 1rem 0 0.5rem;
+}
+h1{
+  margin: 2rem 0;
+  text-align: center;
+  color: #102C57;
+}
+.sub-heading{
+  color: grey;
+  justify-content: center;
+  text-align: center;
+  display: flex;
+  flex-direction:  column;
+}
+a{
+  color: black;
+  text-decoration: none;
+}
+
+
+@media(width < 768px) {
+  .booklist {
+    grid-template-columns: repeat(1, 1fr);
+    align-items: center;
+    gap: 1rem;
+    max-width: 20rem;
+  }
+  .book{
+    /*  margin: 2rem; */
+    
+  }
 }
